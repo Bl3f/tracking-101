@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tracking 101</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Hello</h1>
+        <p>This is the tracking 101.</p>
+        <h2>Complete the survey form</h2>
+        <form>
+            <div class="row">
+                <div class="six columns">
+                    <label for="nameInput">Your name</label>
+                    <input class="u-full-width" type="text" placeholder="toto28" id="nameInput">
+                </div>
+                <div class="six columns">
+                    <label for="gradeInput">Grade</label>
+                    <select class="u-full-width" id="gradeInput">
+                        <option value="Option 1">A</option>
+                        <option value="Option 2">B</option>
+                        <option value="Option 3">C</option>
+                    </select>
+                </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+                <input type="checkbox">
+                <span class="label-body">Send a copy to yourself</span>
+            </label>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+</body>
+<script>
+    !function () {
+        var analytics = window.analytics = window.analytics || [];
+        if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0;
+            analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"];
+            analytics.factory = function (e) {
+                return function () {
+                    var t = Array.prototype.slice.call(arguments);
+                    t.unshift(e);
+                    analytics.push(t);
+                    return analytics
+                }
+            };
+            for (var e = 0; e < analytics.methods.length; e++) {
+                var key = analytics.methods[e];
+                analytics[key] = analytics.factory(key)
+            }
+            analytics.load = function (key, e) {
+                var t = document.createElement("script");
+                t.type = "text/javascript";
+                t.async = !0;
+                t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                var n = document.getElementsByTagName("script")[0];
+                n.parentNode.insertBefore(t, n);
+                analytics._loadOptions = e
+            };
+            analytics._writeKey = "aT1oZkwMg59zC6Va1pTmXrorZ5Rqqpgj";
+            ;analytics.SNIPPET_VERSION = "4.15.3";
+            analytics.load("aT1oZkwMg59zC6Va1pTmXrorZ5Rqqpgj");
+            analytics.page();
+        }
+    }();
+</script>
+</html>
